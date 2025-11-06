@@ -1,6 +1,6 @@
 import React from 'react'
 import Logo from '../../assets/logo-basel.svg'
-
+import { Link } from 'react-router'
 function Header() {
     return (
         <>
@@ -9,9 +9,9 @@ function Header() {
                     <div className="contact"><i className="bi bi-phone-fill"></i> +977 9800000000</div>
                     <ul className="d-flex gap-3 mb-0">
                         <li><a href="">My Account </a></li>
-                        <li><a href="">Cart </a></li>
+                        <li><Link to={`/cart`}>Cart </Link></li>
                         <li><a href="">our location </a></li>
-                        <li><a href="">Contact Us</a></li>
+                        <li> <Link to={`/contact`}>Contact us</Link></li>
                     </ul>
                 </div>
                 <div className="nav-bar d-flex justify-content-between align-items-center">
@@ -24,9 +24,9 @@ function Header() {
                             <li><a href="">Features</a></li>
                         </ul>
                     </nav>
-                    <a href="">
+                    <Link to={`/`}>
                         <img src={Logo} alt="" />
-                    </a>
+                    </Link>
                     <div className="account">
                         Login / Register
                     </div>
