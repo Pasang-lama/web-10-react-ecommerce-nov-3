@@ -1,3 +1,4 @@
+import Banner from "./component/banner/Banner"
 import Categorycard from "./component/category/Categorycard"
 import Footer from "./component/layouts/Footer"
 import Header from "./component/layouts/Header"
@@ -6,6 +7,10 @@ function App() {
   return (
     <>
       <Header />
+      <section className="banner-section">
+        <Banner />
+
+      </section>
 
       <section className="my-5 container">
         <p className="text-center">MADE THE HARD WAY</p>
