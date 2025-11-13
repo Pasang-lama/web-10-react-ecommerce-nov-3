@@ -44,3 +44,30 @@
         height: 60vh;
     }
 }
+
+.product-cards{
+    position: relative;
+    img{
+        border-radius: 3px ;
+    }
+    h3{
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    .price-tag{
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        background-color: orange;
+        color: white;
+        padding: 0px 10px;
+        border-radius: 3px;
+    }
+}
+
+.product-images{
+    img{
+        height: 100px;
+        width: 100px;
+    }
+}

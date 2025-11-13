@@ -1,6 +1,6 @@
 import React from 'react'
-
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router';
 
 function Product() {
 
@@ -10,7 +10,6 @@ function Product() {
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
-
     return (
         <section className='container my-5'>
             <p className="text-center">MADE THE HARD WAY</p>
@@ -22,11 +21,12 @@ function Product() {
             <div className="row gy-4">
                 {
                     products.map((items, index) => (
-                        <div className="col-lg-3">
-                            <div className="card p-3">
+                        <div className="col-lg-3" key={index}>
+                            <div className="card p-3 product-cards">
                                 <img src={items.images[0]} alt="" />
+                                <span className='price-tag'>${items.price}</span>
                                 <h3 className="text-center">{items.title}</h3>
-                                <span className='bandage'>${items.price}</span>
+                                <Link to={`/products/${items.slug}`} className='btn btn-primary'>View Product</Link>
                             </div>
                         </div>
                     ))

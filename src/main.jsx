@@ -9,6 +9,8 @@ import App from './App.jsx'
 import './scss/style.scss'
 import Contact from './component/pages/Contact.jsx';
 import Pagenotfound from './component/pages/Pagenotfound.jsx';
+import Shop from './component/pages/Shop.jsx';
+import Productdetails from './component/product/Productdetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,15 @@ const router = createBrowserRouter([
     {
     path: "/contact",
     element: <Contact />,
+  },
+   {
+    path: "/shop",
+    element: <Shop />,
+  },
+
+   {
+    path: "/products/:slug",
+    element: <Productdetails />,
   },
     {
     path: "/*",
